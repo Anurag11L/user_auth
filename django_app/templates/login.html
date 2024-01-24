@@ -3,8 +3,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h2>Login</h2>
+  
   <div class="container">
+    <h2>Login</h2>
   <form method="post" action="{% url 'login' %}">
     {% csrf_token %}
 
@@ -21,7 +22,7 @@
       {{ form.password.errors }}
     </div>
 
-    <button type="submit">Login</button>
+    <button type="submit" class="btn btn-success">Login</button>
   </form>
 </div>
 {% endblock %}

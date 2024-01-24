@@ -3,8 +3,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h2>Sign Up</h2>
+  
   <div class="container">
+    <h2>Sign Up</h2>
   <form method="post" action="{% url 'signup' %}" class="mx-auto">
     {% csrf_token %}
     
@@ -41,7 +42,7 @@
       {{ form.password2.errors }}
     </div>
 
-    <button type="submit">Sign Up</button>
+    <button type="submit" class="btn btn-success">Sign Up</button>
   </form>
 </div>
 {% endblock %}
